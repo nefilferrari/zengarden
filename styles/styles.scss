@@ -17,13 +17,18 @@ $light-red: #d2ab99;
   text-align: center;
 }
 
-//Font apllication
+//Font application
 body {
     font-family: 'Abel', sans-serif;
     background-color: $light-green;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Anton', sans-serif;
+}
+
+//General design
+a {
+  text-decoration: none;
 }
 
 //Layout for small screens
@@ -36,10 +41,10 @@ h1, h2, h3, h4, h5, h6 {
     @include small-screen();
   }
 
-
-  h1, h2, h3, h4, h5, h6 {
-    text-align: center;
+.sidebar {
+  display: none;
 }
+
 }
 
 //Layout for large screens

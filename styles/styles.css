@@ -10,6 +10,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Anton", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 @media (max-width: 650px) {
   .page-wrapper {
     display: block;
@@ -20,8 +24,8 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     text-align: center;
   }
-  h1, h2, h3, h4, h5, h6 {
-    text-align: center;
+  .sidebar {
+    display: none;
   }
 }
 @media (min-width: 651px) {
