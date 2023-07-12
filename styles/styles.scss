@@ -1,0 +1,131 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&display=swap');
+
+//Colors to be used
+$dark-green: #2c6e49;
+$light-green: #9cc69b;
+$dark-red: #9b2915;
+$light-red: #d2ab99;
+
+//Display specifications 
+@mixin small-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+//Font apllication
+body {
+    font-family: 'Abel', sans-serif;
+    background-color: $light-green;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Anton', sans-serif;
+}
+
+//Layout for small screens
+@media (max-width: 650px){
+  .page-wrapper {
+    display: block;
+  }
+
+  body {
+    @include small-screen();
+  }
+
+
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+}
+
+//Layout for large screens
+@media (min-width:651px){
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .intro {
+    grid-column: 2/4;
+  }
+
+  .main {
+    grid-column: 2/4;
+  }
+}
+
+
+[role="banner"] {
+    position: relative;
+    max-width: 960px;
+    height: 10rem;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+//background for the banner
+.intro header::before,
+.intro header::after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    z-index: -1;
+}
+  
+.intro header::before {
+    top: 50px;
+    bottom: 10px;
+    left: -300%;
+    background-color: $dark-green;
+    animation: slideFromLeft 1s ease-in-out forwards;
+}
+  
+.intro header::after {
+    top: 10px;
+    bottom: 50px;
+    right: -300%;
+    background-color: $dark-red;
+    animation: slideFromRight 1s ease-in-out forwards;
+}
+
+
+  //Animation for load
+  @keyframes slideFromLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(430%);
+    }
+  }
+  @keyframes slideFromRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-430%);
+    }
+  }
+
+//positioning for header
+header h1, header h2{
+    grid-column: 2/4;
+    background-color: $light-red;
+    margin: 0;
+    padding: .5rem;
+    max-height: 50%;
+}
+
+header h1{
+    align-self: end;
+}
+header h2{
+    align-self: start;
+}
+
+  

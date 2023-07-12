@@ -1,0 +1,104 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Anton&display=swap");
+body {
+  font-family: "Abel", sans-serif;
+  background-color: #9cc69b;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Anton", sans-serif;
+}
+
+@media (max-width: 650px) {
+  .page-wrapper {
+    display: block;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+}
+@media (min-width: 651px) {
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .intro {
+    grid-column: 2/4;
+  }
+  .main {
+    grid-column: 2/4;
+  }
+}
+[role=banner] {
+  position: relative;
+  max-width: 960px;
+  height: 10rem;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.intro header::before,
+.intro header::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  z-index: -1;
+}
+
+.intro header::before {
+  top: 50px;
+  bottom: 10px;
+  left: -300%;
+  background-color: #2c6e49;
+  animation: slideFromLeft 1s ease-in-out forwards;
+}
+
+.intro header::after {
+  top: 10px;
+  bottom: 50px;
+  right: -300%;
+  background-color: #9b2915;
+  animation: slideFromRight 1s ease-in-out forwards;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(430%);
+  }
+}
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-430%);
+  }
+}
+header h1, header h2 {
+  grid-column: 2/4;
+  background-color: #d2ab99;
+  margin: 0;
+  padding: 0.5rem;
+  max-height: 50%;
+}
+
+header h1 {
+  align-self: end;
+}
+
+header h2 {
+  align-self: start;
+}
+
+/*# sourceMappingURL=styles.css.map */
