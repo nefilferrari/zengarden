@@ -1,91 +1,6 @@
 /* css Zen Garden default style v1.02 */
 /* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
-@import url("https://fonts.googleapis.com/css2?family=Abel&family=Anton&display=swap");
-body {
-  font-family: "Abel", sans-serif;
-  background-color: #9cc69b;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Anton", sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-  font-size: larger;
-}
-
-a:hover {
-  background-color: #d2ab99;
-  padding: 0.5rem;
-  border-radius: 20%;
-}
-
-@media (max-width: 650px) {
-  .page-wrapper {
-    display: block;
-  }
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 1rem;
-  }
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .sidebar {
-    display: none;
-  }
-}
-@media (min-width: 651px) {
-  .page-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  .intro {
-    grid-column: 2/4;
-  }
-}
-[role=banner] {
-  position: relative;
-  max-width: 960px;
-  height: 10rem;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.intro header::before,
-.intro header::after {
-  content: "";
-  position: absolute;
-  width: 70%;
-  z-index: -1;
-}
-
-.intro header::before {
-  top: 50px;
-  bottom: 10px;
-  left: -300%;
-  background-color: #2c6e49;
-  animation: slideFromLeft 1s ease-in-out forwards;
-}
-
-.intro header::after {
-  top: 10px;
-  bottom: 50px;
-  right: -300%;
-  background-color: #9b2915;
-  animation: slideFromRight 1s ease-in-out forwards;
-}
-
+@import "https://fonts.googleapis.com/css2?family=Abel&family=Anton&display=swap";
 @keyframes slideFromLeft {
   0% {
     transform: translateX(0);
@@ -102,20 +17,237 @@ a:hover {
     transform: translateX(-430%);
   }
 }
-header h1, header h2 {
+/*# sourceMappingURL=styles.css.map */
+body {
+  font-family: "Abel", sans-serif;
+  background-color: #d5f0d5;
+}
+h1 {
+  font-family: "Anton", sans-serif;
+}
+h2 {
+  font-family: "Anton", sans-serif;
+}
+h3 {
+  font-family: "Anton", sans-serif;
+}
+h4 {
+  font-family: "Anton", sans-serif;
+}
+h5 {
+  font-family: "Anton", sans-serif;
+}
+h6 {
+  font-family: "Anton", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-size: larger;
+}
+a:hover {
+  background-color: #d2ab99;
+  padding: 0.2rem;
+  border-radius: 20%;
+}
+[role=banner] {
+  position: relative;
+  max-width: 960px;
+  height: 10rem;
+  z-index: 1;
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.intro header::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  z-index: -1;
+  top: 50px;
+  width: 80%;
+  bottom: 10px;
+  left: -300%;
+  background: linear-gradient(90deg, rgba(5, 103, 75, 0.058) 0%, rgba(12, 109, 45, 0.659) 25%, rgba(12, 109, 45, 0.659) 75%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  animation: slideFromLeft 1s ease-in-out forwards;
+}
+.intro header::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  z-index: -1;
+  top: 10px;
+  width: 80%;
+  bottom: 50px;
+  right: -300%;
+  background: linear-gradient(90deg, rgba(5, 103, 75, 0.058) 0%, rgba(172, 4, 4, 0.659) 25%, rgba(172, 4, 4, 0.659) 75%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  animation: slideFromRight 1s ease-in-out forwards;
+}
+header h1 {
   grid-column: 2/4;
   background-color: #d2ab99;
   margin: 0;
   padding: 0.5rem;
   max-height: 50%;
-}
-
-header h1 {
   align-self: end;
 }
-
 header h2 {
+  grid-column: 2/4;
+  background-color: #d2ab99;
+  margin: 0;
+  padding: 0.5rem;
+  max-height: 50%;
   align-self: start;
 }
-
-/*# sourceMappingURL=styles.css.map */
+@media (max-width: 650px) {
+  .page-wrapper {
+    display: block;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+@media (min-width: 651px) {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  h4 {
+    font-size: 2em;
+  }
+  h5 {
+    font-size: 2em;
+  }
+  h6 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1.2em;
+  }
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+    margin: 1em;
+  }
+  .intro {
+    grid-column: 1/5;
+    margin-left: 16em;
+  }
+  .summary {
+    text-align: center;
+    grid-column: 1/5;
+    margin-left: -16em;
+    padding: 3em;
+  }
+  .preamble {
+    grid-column: span 4;
+    text-align: center;
+    width: 100%;
+    margin-left: -8em;
+  }
+  .main-supporting {
+    grid-column: 1/5;
+    margin-left: 8em;
+    margin-right: 8em;
+  }
+  .explanation {
+    text-align: end;
+    margin-bottom: 5em;
+    margin-top: 5em;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 2em;
+    box-shadow: 5px 10px 18px #888888;
+    padding: 3em;
+  }
+  .participation {
+    text-align: start;
+    margin-bottom: 5em;
+    margin-top: 5em;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 2em;
+    box-shadow: 5px 10px 18px #888888;
+    padding: 3em;
+  }
+  .benefits {
+    text-align: end;
+    margin-bottom: 5em;
+    margin-top: 5em;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 2em;
+    box-shadow: 5px 10px 18px #888888;
+    padding: 3em;
+  }
+  .requirements {
+    text-align: start;
+    margin-top: 5em;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 2em;
+    box-shadow: 5px 10px 18px #888888;
+    padding: 3em;
+  }
+  footer {
+    display: flex;
+    align-content: center;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    background-color: #222222;
+    width: 90%;
+    margin-left: 3em;
+    border-radius: 5em;
+    grid-column: span 4;
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+    gap: 10em;
+    justify-content: center;
+  }
+  footer a {
+    color: white;
+  }
+  .sidebar {
+    grid-column: span 4;
+  }
+  .wrapper {
+    display: grid;
+    padding: 7em;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    margin-left: 2em;
+  }
+}
