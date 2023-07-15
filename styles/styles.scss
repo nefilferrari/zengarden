@@ -30,6 +30,7 @@ $background-color_4: #222222;
 body {
 	font-family: $font-family_1;
 	background-color: $background-color_1;
+	max-width: 100%;
 }
 h1 {
 	font-family: $font-family_2;
@@ -79,11 +80,7 @@ a {
 			width: 80%;
 			bottom: 10px;
 			left: -300%;
-			background: linear-gradient(90deg, 
-      rgba(5, 103, 75, 0.058) 0%, 
-      rgba(12, 109, 45, 0.659) 25%, 
-      rgba(12, 109, 45, 0.659) 75%, 
-      rgba(255, 255, 255, 0) 100%);
+			background: linear-gradient(90deg, rgba(5, 103, 75, 0.058) 0%, rgba(12, 109, 45, 0.659) 25%, rgba(12, 109, 45, 0.659) 75%, rgba(255, 255, 255, 0) 100%);
 			box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
 			animation: slideFromLeft 1s ease-in-out forwards;
 		}
@@ -96,11 +93,7 @@ a {
 			width: 80%;
 			bottom: 50px;
 			right: -300%;
-			background: linear-gradient(90deg, 
-      rgba(5, 103, 75, 0.058) 0%, 
-      rgba(172, 4, 4, 0.659) 25%, 
-      rgba(172, 4, 4, 0.659) 75%, 
-      rgba(255, 255, 255, 0) 100%);
+			background: linear-gradient(90deg, rgba(5, 103, 75, 0.058) 0%, rgba(172, 4, 4, 0.659) 25%, rgba(172, 4, 4, 0.659) 75%, rgba(255, 255, 255, 0) 100%);
 			box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
 			animation: slideFromRight 1s ease-in-out forwards;
 		}
@@ -185,11 +178,11 @@ header {
 	}
 	.page-wrapper {
 		display: grid;
+		max-width: 100%;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
 		box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
 		margin: 1em;
-		width: 100%;
 	}
 	.intro {
 		grid-column: 1/5;
@@ -207,14 +200,17 @@ header {
 		width: 100%;
 		margin-left: -8em;
 	}
-	.main-supporting {
-		grid-column: 1/5;
+	.main {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-column: span 5;
 		margin-left: 8em;
 		margin-right: 8em;
 		max-width: 100%;
 	}
 	.explanation {
 		text-align: end;
+		grid-column: span 4;
 		margin-bottom: 5em;
 		margin-top: 5em;
 		background-color: $background-color_3;
@@ -225,6 +221,7 @@ header {
 	.participation {
 		text-align: start;
 		margin-bottom: 5em;
+		grid-column: span 4;
 		margin-top: 5em;
 		background-color: $background-color_3;
 		border-radius: 2em;
@@ -234,6 +231,7 @@ header {
 	.benefits {
 		text-align: end;
 		margin-bottom: 5em;
+		grid-column: span 4;
 		margin-top: 5em;
 		background-color: $background-color_3;
 		border-radius: 2em;
@@ -242,6 +240,7 @@ header {
 	}
 	.requirements {
 		text-align: start;
+		grid-column: span 4;
 		margin-top: 5em;
 		background-color: $background-color_3;
 		border-radius: 2em;
@@ -254,19 +253,23 @@ header {
 		padding: 1.5em;
 		margin-bottom: 2em;
 		background-color: $background-color_4;
-		width: 90%;
 		margin-left: 3em;
 		border-radius: 5em;
 		grid-column: span 4;
-		box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+		box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
 		gap: 10em;
 		justify-content: center;
+		width: 70%;
+		position: absolute;
+		margin-top: 190%;
 		a {
 			color: $color_2;
 		}
 	}
 	.sidebar {
 		grid-column: span 4;
+		max-width: 100%;
+		margin-bottom: 3em;
 	}
 	.wrapper {
 		display: grid;
