@@ -17,29 +17,36 @@
     transform: translateX(-430%);
   }
 }
-/*# sourceMappingURL=styles.css.map */
+
 body {
   font-family: "Abel", sans-serif;
   background-color: #d5f0d5;
 }
+
 h1 {
   font-family: "Anton", sans-serif;
 }
+
 h2 {
   font-family: "Anton", sans-serif;
 }
+
 h3 {
   font-family: "Anton", sans-serif;
 }
+
 h4 {
   font-family: "Anton", sans-serif;
 }
+
 h5 {
   font-family: "Anton", sans-serif;
 }
+
 h6 {
   font-family: "Anton", sans-serif;
 }
+
 a {
   text-decoration: none;
   color: black;
@@ -50,6 +57,7 @@ a:hover {
   padding: 0.2rem;
   border-radius: 20%;
 }
+
 [role=banner] {
   position: relative;
   max-width: 960px;
@@ -59,6 +67,7 @@ a:hover {
   text-align: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
 .intro header::before {
   content: "";
   position: absolute;
@@ -85,6 +94,7 @@ a:hover {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
   animation: slideFromRight 1s ease-in-out forwards;
 }
+
 header h1 {
   grid-column: 2/4;
   background-color: #d2ab99;
@@ -101,6 +111,7 @@ header h2 {
   max-height: 50%;
   align-self: start;
 }
+
 @media (max-width: 650px) {
   .page-wrapper {
     display: block;
@@ -166,6 +177,7 @@ header h2 {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
     margin: 1em;
+    max-width: 1200px;
   }
   .intro {
     grid-column: 1/5;
@@ -251,3 +263,5 @@ header h2 {
     margin-left: 2em;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */
