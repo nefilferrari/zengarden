@@ -18,7 +18,7 @@
   }
 }
 
-body {
+html, body {
   font-family: "Abel", sans-serif;
   background-color: #d5f0d5;
   max-width: 100%;
@@ -183,13 +183,13 @@ header h2 {
   .intro {
     grid-column: span 4;
     max-width: 100%;
-    margin-left: 21em;
+    margin-left: 17%;
     margin-top: 2em;
   }
 
   [role=banner] {
     height: 10rem;
-    max-width: 80em;
+    max-width: 80%;
     z-index: 1;
     display: grid;
     text-align: center;
@@ -258,19 +258,17 @@ header h2 {
   }
   footer {
     display: flex;
-    align-content: center;
     padding: 1.5em;
     margin-bottom: 2em;
     background-color: #222222;
     margin-left: 1em;
     border-radius: 5em;
-    grid-column: span 4;
     box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
     gap: 10em;
     justify-content: center;
-    width: 100em;
+    width: 75%;
     position: absolute;
-    margin-top: 168em;
+    margin-top: 187%;
   }
   footer a {
     color: white;
