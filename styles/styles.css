@@ -181,9 +181,21 @@ header h2 {
     margin: 1em;
   }
   .intro {
-    grid-column: 1/5;
-    margin-left: 16em;
+    grid-column: span 4;
+    max-width: 100%;
+    margin-left: 21em;
+    margin-top: 2em;
   }
+
+  [role=banner] {
+    height: 10rem;
+    max-width: 80em;
+    z-index: 1;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
   .summary {
     text-align: center;
     grid-column: 1/5;
@@ -250,15 +262,15 @@ header h2 {
     padding: 1.5em;
     margin-bottom: 2em;
     background-color: #222222;
-    margin-left: 3em;
+    margin-left: 1em;
     border-radius: 5em;
     grid-column: span 4;
     box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
     gap: 10em;
     justify-content: center;
-    width: 70%;
+    width: 100em;
     position: absolute;
-    margin-top: 190%;
+    margin-top: 168em;
   }
   footer a {
     color: white;
@@ -267,6 +279,7 @@ header h2 {
     grid-column: span 4;
     max-width: 100%;
     margin-bottom: 3em;
+    margin-top: -2em;
   }
   .wrapper {
     display: grid;
