@@ -150,7 +150,7 @@ header h2 {
     display: none;
   }
 }
-@media (min-width: 651px) {
+@media (min-width: 651px){
   h1 {
     font-size: 2em;
   }
@@ -176,8 +176,6 @@ header h2 {
     display: grid;
     max-width: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
     margin: 1em;
   }
   .intro {
@@ -210,6 +208,7 @@ header h2 {
   }
   .main {
     display: grid;
+    font-size: 16px;
     grid-template-columns: 1fr;
     grid-column: span 5;
     margin-left: 8em;
@@ -258,17 +257,18 @@ header h2 {
   }
   footer {
     display: flex;
+    font-size: 16px;
     padding: 1.5em;
-    margin-bottom: 2em;
     background-color: #222222;
-    margin-left: 1em;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
     border-radius: 5em;
     box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
     gap: 10em;
     justify-content: center;
-    width: 75%;
-    position: absolute;
-    margin-top: 187%;
+    max-width: 100%;
+    position: relative;
+    margin-top: 30em;
   }
   footer a {
     color: white;
@@ -276,8 +276,7 @@ header h2 {
   .sidebar {
     grid-column: span 4;
     max-width: 100%;
-    margin-bottom: 3em;
-    margin-top: -2em;
+    margin-top: -40em;
   }
   .wrapper {
     display: grid;
